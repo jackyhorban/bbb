@@ -2,11 +2,8 @@
 
 function boir_manager_form_Fn($atts) {
     ob_start();
-
     $_SESSION['checkout_processor'] = 'nmi';
-
     require(plugin_dir_path(__FILE__) . '/forms/BOIRForm.php');
-
     return ob_get_clean();
 }
 add_shortcode('boir_manager_form', 'boir_manager_form_Fn');
