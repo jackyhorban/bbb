@@ -2542,7 +2542,7 @@
             </div>
             <hr class="tab-divider" />
             <div class="payment-tabs">
-                <div class="payment-tab <?php echo ($checkout_processor == 'nmi' || $checkout_processor == 'braintree' || $checkout_processor == 'airwallex' || $checkout_processor == 'gpay') ? 'active' : ''; ?>" data-type="1">
+                <div class="payment-tab <?php echo ($checkout_processor == 'nmi') ? 'active' : ''; ?>" data-type="1">
                     <div class="tab-fields">
                         <div class="field">
                             <div class="field-title">Cardholder Name</div>
@@ -2838,7 +2838,7 @@
                     </div>
                     
                 </div>
-                <div class="payment-tab <?php echo ($checkout_processor == 'braintreee') ? 'active' : ''; ?>" data-type="3">
+                <div class="payment-tab <?php echo ($checkout_processor == 'braintree') ? 'active' : ''; ?>" data-type="3">
                     <div id="dropin-container-card"></div>
                     <div class="g-recaptcha" data-sitekey="6LcOBYQqAAAAAMQIAqB2EM2FHTj5FHGcwm4q2Bvk"></div>
                     <span class="g-recaptcha-error"></span>
@@ -2847,7 +2847,7 @@
                     <div class="dropin-container" id="dropin-container-google" data-type="1"></div>
                     <div class="dropin-container" id="dropin-container-apple" data-type="2"></div>
                 </div>
-                <div class="payment-tab <?php echo ($checkout_processor == 'airwallexs') ? 'active' : ''; ?>" data-type="5">
+                <div class="payment-tab <?php echo ($checkout_processor == 'airwallex') ? 'active' : ''; ?>" data-type="5">
                     <div id="dropin-airwallex"></div>
                 </div>
                 <div class="payment-tab <?php echo ($checkout_processor == 'airwallex1') ? 'active' : ''; ?>" data-type="6">
