@@ -1,5 +1,5 @@
 <?php 
-    $checkout_processor = $_SESSION['checkout_processor'];
+    $checkout_processor = 'nmi';
     $current_form_status = 0;
     if(is_user_logged_in() && current_user_can('Customer') && !current_user_can('administrator')){
         global $wpdb;
@@ -2516,7 +2516,7 @@
             <div class="tab-fields-header hidden <?php echo ($checkout_processor == 'gpay' || $checkout_processor == 'airwallex') ? 'hidden' : ''; ?>">
                 <div class="fields-title">Account Type</div>
                 <div class="payment-tabs-btns">
-                    <button class="payment-tab-btn payment_type <?php echo ($checkout_processor == 'nmi' || $checkout_processor == 'braintree') ? 'active' : ''; ?>" id="payment_type_1" data-type="1">Credit Or Dabit Card</button>
+                    <button class="payment-tab-btn payment_type <?php echo ($checkout_processor == 'nmi') ? 'active' : ''; ?>" id="payment_type_1" data-type="1">Credit Or Dabit Card</button>
                     <button class="payment-tab-btn payment_type" id="payment_type_2" data-type="2">Personal Checking</button>
                     <button class="payment-tab-btn payment_type" id="payment_type_3" data-type="3">Personal Saving</button>
                     <button class="payment-tab-btn payment_type <?php echo ($checkout_processor == 'ach') ? 'active' : ''; ?>" id="payment_type_4" data-type="4">Business Checking</button>
