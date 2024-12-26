@@ -1,5 +1,5 @@
 <?php 
-    $checkout_processor = 'nmi';
+    $checkout_processor = $_SESSION['checkout_processor'];
     $current_form_status = 0;
     if(is_user_logged_in() && current_user_can('Customer') && !current_user_can('administrator')){
         global $wpdb;
